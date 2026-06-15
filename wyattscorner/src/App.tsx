@@ -11,10 +11,11 @@ async function query_ai() {
 }
 function construct_navbar() {
   return(
+  <div>
+    <br></br>
   <div className="rounded">
     <nav>
       <ul>
-
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -23,18 +24,28 @@ function construct_navbar() {
       </ul>
     </nav>
   </div>
+  </div>
   )
 }
-
+function standard_head() {
+  return(
+    <head>
+      <title>Wyatt's Corner</title>
+    </head>
+  )
+}
 function App() {
   async function responseHandler() {
     let response = await query_ai()
     document.getElementById('response').textContent = response.response
   }
   return (
+    standard_head(),
     construct_navbar()
   )
 }
 
 
 export default App
+
+

@@ -19,9 +19,13 @@ nav li a {
 nav li a:hover {
   background-color: #ffffff;
   color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font: 50px;
 }
 .rounded {
   border-radius: 110px;
   overflow: hidden;
-  ;
+  font-family: Arial, Helvetica, sans-serif;
+  font: bold;
 }
+
