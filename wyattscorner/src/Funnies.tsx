@@ -13,7 +13,6 @@ function construct_navbar() {
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/funnies">Funnies</Link></li>
         <li><Link to="/guestbook">Guestbook</Link></li>
-
       </ul>
     </nav>
   </div>
@@ -22,7 +21,7 @@ function construct_navbar() {
 }
 
 
-function ProjectsPage() {
+function FunniesPage() {
     const [projects, setProjects] = useState([]);
     const [error, setError] = useState(null);
 
@@ -36,7 +35,7 @@ function ProjectsPage() {
               const data = await res.json();
               // keep only projects marked important (index 3 === 1)
               // and NOT marked as experiments (index 4 === 0)
-              setProjects((data.results || []).filter(p => Number(p[3]) === 1));
+              setProjects((data.results || []).filter(p => Number(p[4]) === 1));
               console.log("Data loaded:", data);
             } catch (err) {
               console.error("Fetch failed:", err);
@@ -56,7 +55,7 @@ function ProjectsPage() {
                         <li><Link to="/projects">Projects</Link></li>
                         <li><Link to="/funnies">Funnies</Link></li>
                         <li><Link to="/guestbook">Guestbook</Link></li>
-                
+                        
                     </ul>
                 </nav>
             </div>
@@ -75,4 +74,4 @@ function ProjectsPage() {
     )
 }
 
-export default ProjectsPage
+export default FunniesPage

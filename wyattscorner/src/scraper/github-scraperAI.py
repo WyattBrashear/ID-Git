@@ -123,7 +123,7 @@ def summarize_repo(repo_name: str, description: str | None, readme: str,
     'is_important', 'is_experiment') that gives the model persistent context
     across summarisations so it can make more consistent judgements.
     """
-    api_key = ""
+    api_key = "tgp_v1_4zaZQF8PlHMbXb4Y9BXUbWsG1mNsgVlsLvjXQMjQB0E"
     if not api_key:
         print("ERROR: TOGETHER_API_KEY environment variable is not set.", file=sys.stderr)
         sys.exit(1)
