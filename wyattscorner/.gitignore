@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 cheating/*
+src/scraper/*
 
 # Editor directories and files
 .vscode/*

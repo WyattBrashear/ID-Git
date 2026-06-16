@@ -21,6 +21,7 @@ function construct_navbar() {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#funnies">Funnies</a></li>
         <li><a href="#guestbook">Guestbook</a></li>
+        <li><a href="#chat">Chat</a></li>
       </ul>
     </nav>
   </div>
