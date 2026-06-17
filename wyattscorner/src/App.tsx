@@ -6,6 +6,7 @@ import Guestbook from './Guestbook.tsx';
 import FunniesPage from './Funnies.tsx';
 import { Link } from "react-router-dom";
 import About from './About.tsx';
+import Chat from './Chat.tsx';
 
 
 function construct_navbar() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/funnies" element={<FunniesPage />} />
         <Route path="/guestbook" element={<Guestbook />} />
         <Route path="/about" element={<About />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </BrowserRouter>
   )

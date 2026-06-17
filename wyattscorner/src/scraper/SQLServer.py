@@ -40,11 +40,11 @@ def guestbook():
 
 
 
-@app.route("/api/query", methods=["POST"])
+@app.route("/api/query/", methods=["POST"])
 def im_too_lazy_to_do_javascript():
-    data = request.get_json()
-    query = data.get("messages")
-    model = data.get("model")
+    body = request.get_json()
+    query = body.get("messages")
+    model = body.get("model")
     response = together.chat.completions.create(
         model=model,
         messages=query
