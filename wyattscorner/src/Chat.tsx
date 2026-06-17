@@ -37,7 +37,7 @@ function Chat() {
                         <li><Link to="/projects">Projects</Link></li>
                         <li><Link to="/funnies">Funnies</Link></li>
                         <li><Link to="/guestbook">Guestbook</Link></li>
-                        <li><Link to="/chat">Chat</Link></li>
+                        
                     </ul>
                 </nav>
             </div>

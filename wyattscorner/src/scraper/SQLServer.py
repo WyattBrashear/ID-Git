@@ -1,11 +1,15 @@
 import sqlite3
 from flask import Flask, request
+import dotenv
 from flask_cors import CORS
+import os
 from together import Together
+
+dotenv.load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
-together = Together(api_key="")
+together = Together(api_key= os.getenv("OPENAPI"))
 @app.route('/api/query_sql')
 def query_sql():
     query_sql = request.args.get('query')

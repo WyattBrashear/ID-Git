@@ -263,3 +263,26 @@ p, label {
 
 /* ─── Error text ───────────────────────────────────────────────────────────── */
 .error-text { color: rgba(255,100,100,0.9); }
+
+.lessrounded {
+  border-radius: 500px;
+  overflow: hidden;
+  margin: 24px 0 32px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.08),
+    0 0 40px rgba(255,255,255,0.03);
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
+}
+.smallrounded {
+  border-radius: 100px;
+  overflow: hidden;
+  margin: 24px 0 32px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.08),
+    0 0 40px rgba(255,255,255,0.03);
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
+}
