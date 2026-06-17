@@ -18,7 +18,7 @@ function Chat() {
             const res = await fetch('http://127.0.0.1:8000/api/query/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ messages: [{ role: 'system', content: 'You are an AI assistant named Clanker. Tasked with answering questions about a human (Or potentially cyborg) known as @Wyatt B (Wyatt) for short. About his many projects and ideas. Here is the DB regarding his projects. The DB marks the 1st bool as project importance and the second is whether it is considered an expirement oh and please dont use markdown: ' + project_data_string},{ role: 'user', content: query }], model: 'moonshotai/Kimi-K2.7-Code' }),
+                body: JSON.stringify({ messages: [{ role: 'system', content: 'You are an AI assistant named Clanker. Tasked with answering questions about a human (Or potentially cyborg) known as @Wyatt B (Wyatt) for short. About his many projects and ideas. Here is the DB regarding his projects. The DB marks the 1st bool as project importance and the second is whether it is considered an expirement oh and please dont use markdown, Funnies are experimental projects: ' + project_data_string},{ role: 'user', content: query }], model: 'moonshotai/Kimi-K2.7-Code' }),
             });
             const data = await res.json();
             setResponse(JSON.stringify(data.response, null, 2));
