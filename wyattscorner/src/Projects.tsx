@@ -9,7 +9,7 @@ function ProjectsPage() {
     useEffect(() => {
         (async function load() {
             try {
-                const res = await fetch("http://localhost:8000/api/query_sql?query=SELECT%20*%20FROM%20repositories", {
+                const res = await fetch("http://api.wyattb.dev/api/query_sql?query=SELECT%20*%20FROM%20repositories", {
                     method: 'GET',
                     headers: { 'Content-Type': 'application/json' },
                 });
