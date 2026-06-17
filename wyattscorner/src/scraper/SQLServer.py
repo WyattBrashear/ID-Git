@@ -27,8 +27,9 @@ def execute_sql():
     return {'results': results}
 @app.route('/api/guestbook/', methods=['POST'])
 def guestbook():
-    name = request.form.get('name')
-    message = request.form.get('message')
+    body = request.get_json()
+    name = body.get('name')
+    message = body.get('message')
     db = sqlite3.connect('./json_data/repos.db')
     cursor = db.cursor()
     cursor.execute("CREATE TABLE IF NOT EXISTS guestbook (id INTEGER PRIMARY KEY, name TEXT, message TEXT)")
